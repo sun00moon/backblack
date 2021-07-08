@@ -1,62 +1,123 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post-collapse.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Archives: 2021/7 |
+    
+    Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-{% block title %}{{ __('title.archive') }} | {{ config.title }}{% endblock %}
+  
+<link rel="stylesheet" href="/css/technology.css">
 
-{% block page_class %}page-archive{% endblock %}
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-{% block content %}
+  
+  
+<script src="/js/pace.min.js"></script>
 
-  {#####################}
-  {### ARCHIVE BLOCK ###}
-  {#####################}
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-      <span class="archive-page-counter">
-        {% set cheers %}
-        {% set posts_length = site.posts.length %}
-        {% if posts_length > 210 %} {% set cheers = 'excellent' %}
-          {% elif posts_length > 130 %} {% set cheers = 'great' %}
-          {% elif posts_length > 80 %} {% set cheers = 'good' %}
-          {% elif posts_length > 50 %} {% set cheers = 'nice' %}
-          {% elif posts_length > 30 %} {% set cheers = 'ok' %}
-        {% else %}
-          {% set cheers = 'um' %}
-        {% endif %}
-        {{ __('cheers.' + cheers) }}! {{ _p("counter.archive_posts", site.posts.length) }} {{ __('keep_on') }}
-      </span>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <section class="outer">
+  <article class="articles">
+    
+    <h1 class="page-type-title">2021/7</h1>
 
-      {% for post in page.posts %}
+    
+    
+    
+      
+      
+        
+        
+    <div class="archives-wrap">
+      <div class="archive-year-wrap">
+        <a href="/archives/2021" class="archive-year">2021</a>
+      </div>
+      <div class="archives">
+        
+        <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2021/07/07/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0/" class="archive-article-date">
+  <time datetime="2021-07-07T07:39:13.000Z" itemprop="datePublished">07/07</time>
+</a>
+      
+  
+    <h2 itemprop="name">
+      <a class="archive-article-title" href="/2021/07/07/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0/">我的文章</a>
+    </h2>
+  
 
-        {# Show year #}
-        {% set year %}
-        {% set post.year = date(post.date, 'YYYY') %}
-
-        {% if post.year !== year %}
-          {% set year = post.year %}
-          <div class="collection-title">
-            <{% if theme.seo %}h2{% else %}h1{% endif %} class="archive-year" id="archive-year-{{ year }}">{{ year }}</{% if theme.seo %}h2{% else %}h1{% endif %}>
-          </div>
-        {% endif %}
-        {# endshow #}
-
-        {{ post_template.render(post) }}
-
-      {% endfor %}
-
-    </div>
+    </header>
+    
   </div>
-  {#########################}
-  {### END ARCHIVE BLOCK ###}
-  {#########################}
+</article>
+        
+      
+      
+        <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2021/07/07/hello-world/" class="archive-article-date">
+  <time datetime="2021-07-07T06:48:19.123Z" itemprop="datePublished">07/07</time>
+</a>
+      
+  
+    <h2 itemprop="name">
+      <a class="archive-article-title" href="/2021/07/07/hello-world/">Hello World</a>
+    </h2>
+  
 
-  {% include '_partials/pagination.swig' %}
+    </header>
+    
+  </div>
+</article>
+        
+        
+      </div>
+    </div>
+    
+  
+  
+</section>
+    </div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+<script src="/js/technology.js"></script>
+
+
+  </div>
+</body>
+</html>
